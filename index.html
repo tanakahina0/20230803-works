@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="header_menu">
+        <h1 class="header_title">マイポートフォリオ</h1>
+        <ul class="header_list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+    <header class="header_menuSP">
+      <div class="navtext-container">
+        <h1 class="header_title">マイポートフォリオ</h1>
+      </div>
+      <input type="checkbox" class="menu-btn" id="menu-btn">
+      <label for="menu-btn" class="menu-icon"><span class="navicon"></span></label>
+      <ul class="menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+  
+    </header>
+    <section id="about" class="about">
+      <div class="aboutCard">
+        <h2>About</h2>
+        <img src="https://via.placeholder.com/150" alt="">
+        <p>フロントエンドエンジニアの山田太郎です。モダンなデザインと直感的なUI/UXを追求し、ReactやVue.jsを駆使したウェブアプリケーションの開発を得意としています。詳細はプロジェクトページをご覧ください。</p>
+      </div>
+    </section>
+    <!-- モーダルウィンドウ模範解答 -->
+    <section id="products" class="section">
+      <div class="container">
+        <h2>Products</h2>
+        <div class="products-grid">
+          <div class="product" data-description = "作品その1">
+            <img src="https://via.placeholder.com/150" alt="作品その1">
+            <h3>作品その1</h3>
+          </div>
+          <div class="product" data-description = "作品その1">
+            <img src="https://via.placeholder.com/150" alt="作品その">
+            <h3>作品その2</h3>
+          </div>
+          <div class="product" data-description = "作品その1">
+            <img src="https://via.placeholder.com/150" alt="作品その3">
+            <h3>作品その3</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <div class="contactForm">
+        <form id="contactForm" action="/submit" novalidate>
+          <div class="form_group">
+            <label for="name">お名前:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form_group">
+            <label for="e-mail">メールアドレス:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form_group">
+            <label for="message">メッセージ:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <p id="errorMessage"></p>
+          <button type="submit">送信</button>
+        </form>
+      </div>
+    </section>
+    <!-- モーダルウィンドウの中身 -->
+     <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <div class="modal-header">
+          <h3 id="modal-title"></h3>
+        </div>
+        <div class="modal-body">
+          <img id="modal-image" src="https://via.placeholder.com/150" alt="イメージ画像">
+          <p id="modal-text"></p>
+        </div>
+        <div class="modal-footer">
+          <button class="modal-button">詳しくはこちら</button>
+        </div>
+      </div>
+     </div>
+  </main>
+</body>
+<script src="./js/script.js"></script>
+</html>
